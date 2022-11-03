@@ -30,24 +30,43 @@
 
       main {
         /* display: inline-block; */
-        vertical-align: middle;
+        /* vertical-align: right; */
+        float: right;
         background: url();
-        padding: 40px;
-        max-width: 500px;
+        padding: 100px;
+        max-width: 520px;
         text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
         /* box-shadow: 0 5px 15px rgba(0,0,0,0.5); */
       }
 
+      nav {
+        display: inline-block;
+        vertical-align: middle;
+        text-align: center;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+        font-size: 18;
+      }
+
       h1 {
         font-size: 32px;
+        text-shadow: 0.07em 0 black, 0 0.07em black, -0.07em 0 black,
+          0 -0.07em black;
       }
       h2 {
-        font-size: 18px;
-        margin-top: 6px;
+        font-size: 20px;
+        /* margin-top: 6px; */
+        text-shadow: 0.06em 0 black, 0 0.06em black, -0.06em 0 black,
+          0 -0.06em black;
+        color: #d0ec00;
       }
       p {
-        text-align: left;
+        /* text-align: right; */
+        font-size: 20px;
         margin-top: 20px;
+        text-shadow: 0.07em 0 black, 0 0.07em black, -0.07em 0 black,
+          0 -0.07em black;
+          color: #d0ec00;
       }
       a {
         color: #ff6800;
@@ -71,6 +90,9 @@
       button {
         font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
         padding: 0 0.8em;
+        /* margin-left: 5px; */
+        /* vertical-align: middle; */
+        display: inline-block;
         line-height: 2em;
         border: none;
         background: #666;
@@ -141,15 +163,6 @@
         /* background-color: #4CAF50; */
         /* box-shadow: inset 0em 0em 0em 10em rgba(0, 0, 0, 0.3); */
       }
-
-      nav {
-        vertical-align: middle;
-        text-align: center;
-		text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
-        display: inline-block;
-        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
-        font-size: 18;
-      }
     </style>
   </head>
   <body>
@@ -164,26 +177,45 @@
 
     <main>
       <header>
-        <h1>Mark Lohan</h1>
-        <h2>This is the kind of stuff I do for fun in my spare time</h2>
-        <h2>Imagine what I could do for you on your time</h2>
+        <!-- <h1>Mark Lohan</h1> -->
+        <h2>
+          This is the kind of stuff I do for fun in my spare time. So just
+          imagine, what could I do for you on your time?
+        </h2>
+        <!-- <h2>Imagine what I could do for you on your time</h2> -->
       </header>
       <p>
-        When your finished playing with this, please feel free to have a look at some of my other work in the screencast section
+        When your finished playing with this, please feel free to have a look at
+        some of my other work in the screencast section
       </p>
-      <p>An overview of my modules and self education can be found in the subjects tab</p>
-      <p>And links to download my generic CV, view my Github and LinkedIn can be found in the Contact section</p>
-      <p><br />
-        <button class="js-ripples-pause" type="button">
-          <code>$(<span class="code-string">'body'</span>).ripples(<span class="code-string">"pause"</span>)</code>
-          <!-- <p>pause</p> -->
-        </button>
+      <p>
+        An overview of my modules and self education can be found in the
+        subjects tab
+      </p>
+      <p>
+        And links to download my generic CV, view my Github and LinkedIn can be
+        found in the Contact section
+      </p>
+      <br />
+      <button class="js-ripples-pause" type="button">
+        <code
+          >$(<span class="code-string">'body'</span>).ripples(<span
+            class="code-string"
+            >"pause"</span
+          >)</code
+        >
+        <!-- <p>pause</p> -->
+      </button>
 
-        <button class="js-ripples-play" type="button">
-          <code>$(<span class="code-string">'body'</span>).ripples(<span class="code-string">"play"</span>)</code>
-          <!-- <p>play</p> -->
-        </button>
-      </p>
+      <button class="js-ripples-play" type="button">
+        <code
+          >$(<span class="code-string">'body'</span>).ripples(<span
+            class="code-string"
+            >"play"</span
+          >)</code
+        >
+        <!-- <p>play</p> -->
+      </button>
 
       <!-- <pre><code>
 $(<span class="code-string">'body'</span>).ripples(<span class="code-cbracket">{</span>
@@ -208,47 +240,46 @@ $(<span class="code-string">'body'</span>).ripples(<span class="code-cbracket">{
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
     <script src="../dist/jquery.ripples.js"></script>
     <script>
-      $(document).ready(function() {
-      	try {
-      		$('body').ripples({
-      			resolution: 512,
-      			dropRadius: 20, //px
-      			perturbance: 0.04,
-      		});
-      		$('main').ripples({
-      			resolution: 128,
-      			dropRadius: 10, //px
-      			perturbance: 0.04,
-      			interactive: false
-      		});
-      	}
-      	catch (e) {
-      		$('.error').show().text(e);
-      	}
+      $(document).ready(function () {
+        try {
+          $("body").ripples({
+            resolution: 512,
+            dropRadius: 20, //px
+            perturbance: 0.04,
+          });
+          $("main").ripples({
+            resolution: 128,
+            dropRadius: 10, //px
+            perturbance: 0.04,
+            interactive: false,
+          });
+        } catch (e) {
+          $(".error").show().text(e);
+        }
 
-      	$('.js-ripples-disable').on('click', function() {
-      		$('body, main').ripples('destroy');
-      		$(this).hide();
-      	});
+        $(".js-ripples-disable").on("click", function () {
+          $("body, main").ripples("destroy");
+          $(this).hide();
+        });
 
-      	$('.js-ripples-play').on('click', function() {
-      		$('body, main').ripples('play');
-      	});
+        $(".js-ripples-play").on("click", function () {
+          $("body, main").ripples("play");
+        });
 
-      	$('.js-ripples-pause').on('click', function() {
-      		$('body, main').ripples('pause');
-      	});
+        $(".js-ripples-pause").on("click", function () {
+          $("body, main").ripples("pause");
+        });
 
-      	// Automatic drops
-      	setInterval(function() {
-      		var $el = $('main');
-      		var x = Math.random() * $el.outerWidth();
-      		var y = Math.random() * $el.outerHeight();
-      		var dropRadius = 20;
-      		var strength = 0.04 + Math.random() * 0.04;
+        // Automatic drops
+        // setInterval(function() {
+        // 	var $el = $('main');
+        // 	var x = Math.random() * $el.outerWidth();
+        // 	var y = Math.random() * $el.outerHeight();
+        // 	var dropRadius = 20;
+        // 	var strength = 0.04 + Math.random() * 0.04;
 
-      		$el.ripples('drop', x, y, dropRadius, strength);
-      	}, 400);
+        // 	$el.ripples('drop', x, y, dropRadius, strength);
+        // }, 400);
       });
     </script>
   </body>

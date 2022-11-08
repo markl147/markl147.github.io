@@ -22,7 +22,7 @@
           font-size: 16px;
           font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
           /* background-image: url(img/demo2.jpg); */
-          background-color: #000;
+          /* background-color: #000; */
           background-size: cover;
           background-position: 50% 0;
           height: 100%;
@@ -153,18 +153,154 @@
           /* box-shadow: inset 0em 0em 0em 10em rgba(0, 0, 0, 0.3); */
         }
   
-        nav {
+
+
+        .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5, .bgimg-6, .bgimg-7, .bgimg-8, .bgimg-9,
+        .bgimg-10, .bgimg-11, .bgimg-12 {
+        position: relative;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        
+      }
+      .bgimg-1 {
+        background-image: url("img/tus_logo.jpg");
+        min-height: 115%;
+        background-size: cover;
+      }
+      
+      .bgimg-2 {
+        background-image: url("img/java.jpg");
+        min-height: 115%;
+        background-size: contain;
+      }
+      
+      .bgimg-3 {
+        background-image: url("img/python.jpg");
+        min-height: 115%;
+        background-size: contain;
+      }
+      
+      .bgimg-4 {
+        background-image: url("img/javascript.jpg");
+        min-height: 115%;
+        background-size: contain;
+      }
+      
+      .bgimg-5 {
+        background-image: url("img/sql.jpg");
+        min-height: 115%;
+        background-size: contain;
+      }
+      
+      .bgimg-6 {
+        background-image: url("img/agile.jpg");
+        min-height: 115%;
+        background-size: contain;
+      }
+
+      .bgimg-7 {
+        background-image: url("img/serverside.jpg");
+        min-height: 115%;
+        background-size: contain;
+      }
+      
+      .bgimg-8 {
+        background-image: url("img/maths.jpg");
+        min-height: 115%;
+        background-size: contain;
+      }
+      
+      .bgimg-9 {
+        background-image: url("img/opsystems.jpg");
+        min-height: 115%;
+        background-size: contain;
+      }
+
+      .bgimg-10 {
+        background-image: url("img/linux.jpg");
+        min-height: 115%;
+        background-size: contain;
+      }
+
+      .bgimg-11 {
+        background-image: url("img/next.jpg");
+        min-height: 115%;
+        background-size: contain;
+      }
+      
+/* Page content */
+/* .content {
+  padding: 16px;
+} */
+
+nav {
           vertical-align: middle;
           text-align: center;
           text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
           display: inline-block;
           box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
           font-size: 18;
+          background-color: lightgray;
+          top: 0;
         }
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+/* .sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  
+} */
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+/* .sticky + .content {
+  padding-top: 60px;
+} */
+      
+      .caption {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 100%;
+        text-align: center;
+        color: #000;
+      }
+      
+      .caption span.border {
+        background-color: #111;
+        color: #fff;
+        padding: 18px;
+        font-size: 25px;
+        letter-spacing: 10px;
+      }
+      
+      h3 {
+        text-transform: uppercase;
+        font: 20px "Lato", sans-serif;
+        color:#ddd;
+      }
+      
+      p {
+        font-size: larger;
+      }
+      /* .navbar {
+        transition: top 0.3s;
+      } */
+      .w3-bar .w3-button {
+        padding: 16px;
+      }
+      
+      /* Turn off parallax scrolling for tablets and phones */
+      @media only screen and (max-device-width: 1024px) {
+        .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5, .bgimg-6 {
+          background-attachment: scroll;
+        }
+      }
       </style>
 </head>
 <body>
-    <nav>
+    <nav id="navbar">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="screencasts.html">Screencasts</a></li>
@@ -173,7 +309,7 @@
         </ul>
       </nav>
 
-      <div class="w3-row" style="padding: 10px;">
+      <!-- <div class="w3-row" style="padding: 10px;">
         <div class="w3-third" style="padding: 20px;">
           <h1 style="text-align: center;">Java</h1>
           <p style="text-align: center;">Highly proficient in Java and object oriented programming, having completed 6 semesters worth of the module in 
@@ -195,9 +331,9 @@
             inside the Javascript umbrella I wouldnt happily tackle.
           </p>
         </div>
-      </div>
+      </div> -->
 
-      <div class="w3-row">
+      <!-- <div class="w3-row">
         <div class="w3-third" style="padding: 20px;">
           <h1 style="text-align: center;">MySQL</h1>
           <p style="text-align: center;">Have incorporated databases with MySQL into a several projects over the years. They are 
@@ -219,15 +355,15 @@
             JSP's. We implemented several server side applications last year all with their own databases and HTTP Clients.
           </p>
         </div>
-      </div>
+      </div> -->
 
-      <div class="w3-row">
+      <!-- <div class="w3-row">
         <div class="w3-third" style="padding: 20px;">
           <h1 style="text-align: center;">Maths</h1>
           <p style="text-align: center;">Maths is one of my favourite subjects and also highest resulting grades over the last few 
             years having achieved an above 85% average in years 1, 2 and 3 respectively. In being highly methodical I am lucky in 
             that maths has always clicked with me as most are not so lucky, but this natural skill for understanding maths has 
-            benefitted greatly over the years. 
+            benefitted greatly over the years.
           </p>
         </div>
         <div class="w3-third" style="padding: 20px;">
@@ -244,7 +380,211 @@
             experience can be transferred and used at any company.
           </p>
         </div>
+      </div> -->
+
+      
+
+      
+      <!-- First Image -->
+      <div class="bgimg-1 w3-image">
+        <div class="caption">
+          <span class="border" style="float: left;">Subjects</span></br></br>
+        </div>
       </div>
-    
+      
+      <!-- Caption -->
+      <div style="color:#ddd;background-color:#282E34;text-align:center;padding:20px 10px;text-align: justify;">
+        <h3 class="w3-center">Subjects</h3>
+          <p class="w3-center">
+            Over the years here at A.I.T I have picked up alot of different skills in the classroom as well as outside it. The
+            knowledge I have gained in class gave me the tools I needed to go on and try languages outside of what was being thought
+            in the main stream course. I feel this has benefitted me masssively as I know have a versatile range of languages under 
+            my belt. Here is an overview of some of the most important ones.
+          </p>
+      </div>
+      
+      <!-- Second Image -->
+      <div class="bgimg-2 w3-image">
+        <div class="caption">
+          <span class="border" style="float: left; font-size:20px;color: #f7f7f7;">Java</span>
+        </div>
+      </div>
+      
+      <!-- Caption -->
+      <div style="color:#ddd;background-color:#282E34;text-align:center;padding:20px 10px;text-align: justify;">
+        <h3 class="w3-center">Java</h3>
+          <p class="w3-center">
+            Highly proficient in Java and object oriented programming, having completed 6 semesters worth of the module in 
+            college along with 12 months total placement in Ericsson applying it to industry applications, it is probably my
+            most knowledgable language.
+          </p>
+      </div>
+      
+      <!-- Third Image -->
+      <div class="bgimg-3 w3-image">
+        <div class="caption">
+          <span class="border" style="float: left; font-size:20px;color: #f7f7f7;">Python</span>
+        </div>
+      </div>
+      
+      <!-- Caption -->
+      <div style="color:#ddd;background-color:#282E34;text-align:center;padding:20px 10px;text-align: justify;">
+        <h3 class="w3-center">Python</h3>
+          <p class="w3-center">
+            Self thought prior to 4th year, I found it quite easy to pick up Python after learning Java,
+            have several machine learning industry standard projects under my belt in Ericsson. Have also done several web scraping 
+            projects through Python and Selenium!
+          </p>
+      </div>
+      
+        <!-- Fourth Image -->
+      <div class="bgimg-4 w3-image">
+        <div class="caption">
+          <span class="border" style="float: left; font-size:20px;color: #f7f7f7;">Javascript</span>
+        </div>
+      </div>
+      
+      <!-- Caption -->
+      <div style="color:#ddd;background-color:#282E34;text-align:center;padding:20px 10px;text-align: justify;">
+        <h3 class="w3-center">Javascript</h3>
+          <p class="w3-center">
+            My favourite language to work with, I am fascinated by what can be done with Javascript 
+            (homepage of this website for example!). From front-end to back-end, API keys, Bootstrap, JQuery, theres nothing
+            inside the Javascript umbrella I wouldnt happily tackle.
+          </p>
+      </div>
+          
+      <!-- Fifth Image -->
+      <div class="bgimg-5 w3-image">
+        <div class="caption">
+          <span class="border" style="float: left; font-size:20px;color: #f7f7f7;">MySQL</span>
+        </div>
+      </div>
+      
+      <!-- Caption -->
+      <div style="color:#ddd;background-color:#282E34;text-align:center;padding:20px 10px;text-align: justify;">
+        <h3 class="w3-center">MySQL</h3>
+          <p class="w3-center">
+            Have incorporated databases with MySQL into a several projects over the years. They are 
+            integral to any website or application dealing with stock management and keeping track of customers, I have several 
+            on my Github from a garage application, library check in system and even a phone repair shop system.
+          </p>
+      </div>
+            
+      <!-- Sixth Image -->
+      <div class="bgimg-6 w3-image">
+        <div class="caption">
+          <span class="border" style="float: left; font-size:20px;color: #f7f7f7;">Agile Methodologies</span>
+        </div>
+      </div>
+
+      <!-- Caption -->
+      <div style="color:#ddd;background-color:#282E34;text-align:center;padding:20px 10px;text-align: justify;">
+        <h3 class="w3-center">Agile Methodologies</h3>
+          <p class="w3-center">
+            Having studied the Agile process for the last few years, I have to say I 
+            didn't see the full benefit of test driven development until I had spent some time in Ericsson and seen it applied 
+            to an industry standard. While I have participated in other process models in various projects, I feel
+            Agile and test driven development showed immense benefit above any other process.
+          </p>
+      </div>
+
+      <!-- Seventh Image -->
+      <div class="bgimg-7 w3-image">
+        <div class="caption">
+          <span class="border" style="float: left; font-size:20px;color: #f7f7f7;">Server Side<br>Web Development</span>
+        </div>
+      </div>
+
+      <!-- Caption -->
+      <div style="color:#ddd;background-color:#282E34;text-align:center;padding:20px 10px;text-align: justify;">
+        <h3 class="w3-center">Server Side Web Development</h3>
+          <p class="w3-center">
+            I am also very fond of Server Side programming, particularly the use of servlets and JSP's.
+             We implemented several server side applications last year all with their own databases and HTTP Clients.
+          </p>
+      </div>
+
+      <!-- Eighth Image -->
+      <div class="bgimg-8 w3-image">
+        <div class="caption">
+          <span class="border" style="float: left; font-size:20px;color: #f7f7f7;">Maths</span>
+        </div>
+      </div>
+
+      <!-- Caption -->
+      <div style="color:#ddd;background-color:#282E34;text-align:center;padding:20px 10px;text-align: justify;">
+        <h3 class="w3-center">Maths</h3>
+          <p class="w3-center">
+            Maths is one of my favourite subjects and also highest resulting grades over the last few 
+            years having achieved an above 85% average in years 1, 2 and 3 respectively. In being highly methodical I am lucky in 
+            that maths has always clicked with me as most are not so lucky, but this natural skill for understanding maths has 
+            benefitted greatly over the years.
+          </p>
+      </div>
+
+      <!-- Ninth Image -->
+      <div class="bgimg-9 w3-image">
+        <div class="caption">
+          <span class="border" style="float: left; font-size:20px;color: #f7f7f7;">Operating Systems<br>& Concurrency</span>
+        </div>
+      </div>
+
+      <!-- Caption -->
+      <div style="color:#ddd;background-color:#282E34;text-align:center;padding:20px 10px;text-align: justify;">
+        <h3 class="w3-center">Operating Systems & Concurrency</h3>
+          <p class="w3-center">
+            Applicable to any software position, Operating systems vary from company to company. I 
+            can easily adapt to whatever needs to be used from Windows, Ubuntu, Docker, Kubernetes and also very well 
+            equipped to use virtual machines as well!
+          </p>
+      </div>
+
+      <!-- Tenth Image -->
+      <div class="bgimg-10 w3-image">
+        <div class="caption">
+          <span class="border" style="float: left; font-size:20px;color: #f7f7f7;">Linux</span>
+        </div>
+      </div>
+
+      <!-- Caption -->
+      <div style="color:#ddd;background-color:#282E34;text-align:center;padding:20px 10px;text-align: justify;">
+        <h3 class="w3-center">Linux</h3>
+          <p class="w3-center">
+            I dont think there is any software company in the world not using Linux at this stage. Every job application specifies it. 
+            It is industry standard across the board and thankfully I was lucky to learn Linux quite well at my time in Ericsson as this 
+            experience can be transferred and used at any company.
+          </p>
+      </div>
+
+      <div class="bgimg-11 w3-image">
+        <div class="caption">
+          <span class="border" style="float: left; font-size:20px;color: #f7f7f7;"><a href="contact.html">Next Page</a></span>
+        </div>
+      </div>
+
+      
+      <!-- <script>
+        // When the user scrolls the page, execute myFunction
+      window.onscroll = function() {myFunction()};
+      
+      // Get the navbar
+      var navbar = document.getElementById("navbar");
+      
+      // Get the offset position of the navbar
+      var sticky = navbar.offsetTop;
+      
+      // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+      function myFunction() {
+        if (window.pageYOffset >= sticky) {
+          navbar.classList.add("sticky")
+        } else {
+          navbar.classList.remove("sticky");
+        }
+      }
+      </script>   -->
 </body>
+
+
 </html>
+
